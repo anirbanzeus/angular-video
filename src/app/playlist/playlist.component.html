@@ -1,0 +1,53 @@
+
+  <app-player [selectedVideo]='video'></app-player>
+  <p class="font-weight-bold">Video playlist</p>
+  <div class="table">
+    <table *ngIf="videoList" class="table">
+        <thead class="thead-dark">
+      <tr>
+          <th class="th-lg">ID</th>
+          <th class="th-lg">Name</th>
+              <th class="th-lg">Youtube URL</th>
+                  <th class="th-lg">Status</th>
+      </tr>
+      </thead>
+  
+      
+      <tr *ngFor="let video of videoList" (click)="playVideo(video)">
+          <td>{{video.id}}</td>
+          <td>{{video.title}}</td>
+          <td>{{video.url}}</td>
+          <td>{{video.status}}</td>
+         <!-- <td>
+            <button ng-click="playVideo()">Play</button>
+          </td>-->
+      </tr>
+    
+    </table>
+  </div>
+ <!-- <table *ngIf="videoList">
+      <tr>
+          <th class="th-lg">ID</th>
+              <th class="th-lg">Name</th>
+                  <th class="th-lg">Url</th>
+      </tr>
+  <ul class="videos" style="list-style-type: none;">
+    <li *ngFor="let video of videoList"
+      [class.selected]="video === selectedVideo"
+      (click)="onSelect(video)">
+      <span class="badge">{{video.id}}</span> {{video.title}}
+    </li>
+  </ul>
+  </table>-->
+
+  <!--<div *ngIf="selectedVideo">
+
+    <h2>{{selectedVideo.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{selectedVideo.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="selectedVideo.name" placeholder="name"/>
+      </label>
+    </div>
+  
+  </div>-->
