@@ -8,7 +8,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular video-player';
+  title = 'Video Player';
   //constructor (private http: HttpClient) { }
   //videoList: Video[];
 

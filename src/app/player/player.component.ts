@@ -8,18 +8,21 @@ import { Video } from '../video';
 })
 export class PlayerComponent implements OnInit, OnChanges {
   constructor() { }
-  @Input() selectedVideo:Video;
+  //@Input() 
+  selectedVideo:string;
 
   ngOnChanges(): void {
     console.log("123");  
     
   } 
 
-  onVideoSelect(videoData:Video) {
-    this.selectedVideo = videoData
+  ngOnInit() {
   }
 
-  ngOnInit() {
+  onNotify(video:Video){
+    console.log("Reached event");
+    this.selectedVideo = video.url;
+    console.log(video.url);
   }
 
 }
