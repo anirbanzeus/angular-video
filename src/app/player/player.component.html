@@ -1,6 +1,7 @@
 <div>
-      <div class="embed-responsive embed-responsive-21by9">
-            <video src="{{selectedVideo}}" width="3%" controls></video>          
+      <div class="embed-responsive embed-responsive-16by9">
+            <!--<video src="{{selectedVideo}}" width="3%" controls class="embed-responsive-item"></video>-->
+            <iframe class="embed-responsive-item" width="640" height="480" src="{{selectedVideo}}|filterUrl" frameborder="0" allowfullscreen></iframe>         
       </div>
       <app-playlist (notify)='onNotify($event)'></app-playlist>
 </div>

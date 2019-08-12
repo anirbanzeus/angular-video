@@ -11,6 +11,7 @@ import { PlaylistComponent } from './playlist/playlist.component';
 import { PlayerComponent } from './player/player.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ControlsComponent } from './controls/controls.component';
+import { FilterUrlPipe } from './filter-url.pipe';
 
 const appRoutes: Routes = [
   { path: 'playlist', component: PlaylistComponent },
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
     PlaylistComponent,
     PlayerComponent,
     PageNotFoundComponent,
-    ControlsComponent
+    ControlsComponent,
+    FilterUrlPipe
   ],
   imports: [
     BrowserModule,
@@ -34,4 +36,5 @@ const appRoutes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
